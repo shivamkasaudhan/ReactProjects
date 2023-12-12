@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -54,18 +53,18 @@ function App() {
   return (
     <div className="App">
       <div>
-        From ({from}) :
-        <select onChange={(e) => setFrom(e.target.value)}>
+        <span className='text'>From ({from}) :</span>
+        <select className='select' onChange={(e) => setFrom(e.target.value)}>
           {options.map((opt) => (
             <option key={opt.code} value={opt.code}>
               {opt.name}
             </option>
           ))}
         </select>
-        To ({to}) :
-        <select onChange={(e) => setTo(e.target.value)}>
+        <span className='text'>To ({to}) :</span>
+        <select className='select' onChange={(e) => setTo(e.target.value)}>
           {options.map((opt) => (
-            <option key={opt.code} value={opt.code}>
+            <option  key={opt.code} value={opt.code}>
               {opt.name}
             </option>
           ))}
